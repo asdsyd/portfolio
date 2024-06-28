@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -6,11 +7,14 @@ export default function Home() {
 
       <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px] shadow-2xl">
         <h1 className="text-2xl font-bold px-10">ASAD SAYEED</h1>
-        <nav className="space-x-4 px-10">
-          <a href="#" className="hover:underline">PORTFOLIO</a>
-          <a href="#" className="hover:underline">RESUME</a>
+        <nav className="flex space-x-4 px-10">
+          <Link href="/test" className="hover:underline">PORTFOLIO</Link>
+          <Link href="/hello" className="hover:underline">RESUME</Link>
           <a href="#" className="hover:underline">ABOUT</a>
         </nav>
+
+        
+
       </header>
 
       <div className="flex flex-col items-center justify-center">
