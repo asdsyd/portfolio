@@ -31,7 +31,7 @@ const products = [
   { name: 'Linktree', description: 'All my links in one place', href: 'https://linktr.ee/asdsyd', icon: CursorArrowRippleIcon },
 ]
 const callsToAction = [
-  { name: 'AppStore(coming soon)', href: 'https://apps.apple.com/in/', icon: UserIcon },
+  { name: 'AppStore(coming soon)', href: '/hello', icon: UserIcon },
   { name: 'Contact Me!', href: 'mailto:ashasd02@gmail.com', icon: ChatBubbleLeftIcon },
 ]
 
@@ -43,9 +43,10 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 bg-white">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
+  
 
-    <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px]">
+    <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px] shadow-2xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="https://www.linkedin.com/in/asdsyd/" className="-m-1.5 p-1.5">
@@ -67,7 +68,7 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 px-2 text-sm font-semibold rounded-full leading-6 ">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 ">
               PORTFOLIO
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </PopoverButton>
@@ -83,7 +84,7 @@ export default function Example() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon className="h-6 w-6 text-gray-600 group-hover:text-blue-600" aria-hidden="true" />
+                      <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                     </div>
                     <div className="flex-auto">
                       <a href={item.href} className="block font-semibold text-gray-900">
@@ -120,7 +121,7 @@ export default function Example() {
       </nav>
       <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 ">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
           <div className="text-sm font-bold px-10 text-blue-700">ASAD SAYEED</div>
             <button
@@ -178,25 +179,10 @@ export default function Example() {
         </DialogPanel>
       </Dialog>
     </header>
-    <img className="h-auto" src="apple-developer.png" alt="Apple developer image" />
-    <img className='h-auto' src='tech-stack.png' alt="SwiftUI, SwiftData, Swift and Xcode logo on dynamic island image" />
 
-    <div className='flex justify-between items-center -space-x-14 pt-3'>
-      <img className="w-3/6" src="Wallpaper.png" alt="Screenshots of my Wallpaper" />
-      <p className='text-gray-600 items-center text-6xl'>Design Different😉</p>
-    </div> 
-
-    <div className='flex justify-between -space-x-14 blur-2xl pt-3'>
-      <img className="w-2/6 " src="FlavorVista-AI.png" alt="Screenshots of FlavorVista AI App" />
-      <img className="w-2/6 " src="reddit-vision-pro.png" alt="Screenshots of FlavorVista AI App" />
-    </div>    
-
-
-    
-
-    <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-3 px-5 text-center border bg-gray-200 rounded-full backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Launching FlavorVista AI on AppStore. Stay tuned.
-    </p>
+    <div className="flex flex-col items-center justify-center">
+      <img className="h-auto" src="apple-developer.png" alt="" />
+    </div>
 
 
     <div className="flex justify-center -space-x-14 blur-2xl pt-3">

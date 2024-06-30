@@ -29,9 +29,11 @@ const products = [
   { name: 'Linkedin', description: 'Let\'s connect (primary communication)', href: 'https://www.linkedin.com/in/asdsyd/', icon: IdentificationIcon },
   { name: 'GitHub', description: 'Checkout my projects!', href: 'https://github.com/asdsyd', icon: WrenchScrewdriverIcon },
   { name: 'Linktree', description: 'All my links in one place', href: 'https://linktr.ee/asdsyd', icon: CursorArrowRippleIcon },
+  // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+  // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
-  { name: 'AppStore(coming soon)', href: 'https://apps.apple.com/in/', icon: UserIcon },
+  { name: 'AppStore(coming soon)', href: '/hello', icon: UserIcon },
   { name: 'Contact Me!', href: 'mailto:ashasd02@gmail.com', icon: ChatBubbleLeftIcon },
 ]
 
@@ -43,16 +45,19 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 bg-white">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
+  
 
-    <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px]">
+    <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px] shadow-2xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="https://www.linkedin.com/in/asdsyd/" className="-m-1.5 p-1.5">
             <span className="sr-only">Profile Pic</span>
-            <img className="h-auto w-10 rounded-full" src="selfie-blue-square.jpg" alt="profile picture" />
+            <img className="h-auto w-10 rounded-full" src="selfie-blue-square.jpg" alt="" />
           </a>
         </div>
+
+
         
         <div className="text-lg font-bold px-10">ASAD SAYEED</div>
         <div className="flex lg:hidden">
@@ -67,7 +72,7 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 px-2 text-sm font-semibold rounded-full leading-6 ">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 ">
               PORTFOLIO
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </PopoverButton>
@@ -83,7 +88,7 @@ export default function Example() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon className="h-6 w-6 text-gray-600 group-hover:text-blue-600" aria-hidden="true" />
+                      <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                     </div>
                     <div className="flex-auto">
                       <a href={item.href} className="block font-semibold text-gray-900">
@@ -116,13 +121,29 @@ export default function Example() {
           <a href="#" className="text-sm font-semibold leading-6">
             ABOUT
           </a>
+          {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Company
+          </a> */}
         </PopoverGroup>
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Log in <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div> */}
       </nav>
       <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 ">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
           <div className="text-sm font-bold px-10 text-blue-700">ASAD SAYEED</div>
+            {/* <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a> */}
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -172,37 +193,40 @@ export default function Example() {
                 >
                   ABOUT
                 </a>
+                {/* <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Company
+                </a> */}
               </div>
+              {/* <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </div> */}
             </div>
           </div>
         </DialogPanel>
       </Dialog>
     </header>
-    <img className="h-auto" src="apple-developer.png" alt="Apple developer image" />
-    <img className='h-auto' src='tech-stack.png' alt="SwiftUI, SwiftData, Swift and Xcode logo on dynamic island image" />
-
-    <div className='flex justify-between items-center -space-x-14 pt-3'>
-      <img className="w-3/6" src="Wallpaper.png" alt="Screenshots of my Wallpaper" />
-      <p className='text-gray-600 items-center text-6xl'>Design Different😉</p>
-    </div> 
-
-    <div className='flex justify-between -space-x-14 blur-2xl pt-3'>
-      <img className="w-2/6 " src="FlavorVista-AI.png" alt="Screenshots of FlavorVista AI App" />
-      <img className="w-2/6 " src="reddit-vision-pro.png" alt="Screenshots of FlavorVista AI App" />
-    </div>    
-
-
-    
-
-    <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-3 px-5 text-center border bg-gray-200 rounded-full backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Launching FlavorVista AI on AppStore. Stay tuned.
-    </p>
 
 
     <div className="flex justify-center -space-x-14 blur-2xl pt-3">
         <div className="w-32 h-32 mix-blend-multiply bg-blue-400 rounded-full"></div>
         <div className="w-32 h-32 mix-blend-multiply bg-pink-400 rounded-full"></div>
     </div>
+
+    <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+          Launching FlavorVista AI on AppStore. Stay tuned.
+    </p>
+
+    <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+          Launching FlavorVista AI on AppStore. Stay tuned.
+    </p>
 
     
 
