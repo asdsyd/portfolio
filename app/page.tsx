@@ -198,7 +198,7 @@ export default function Example() {
       </Link>
     </div> 
 
-  <div className='dark:bg-white'>
+  <div className='dark:bg-white rounded-bl-[55px] rounded-br-[55px]'>
       <div className='flex justify-between -space-x-14 blur-2xl pt-3'>
         <img className="w-2/6 " src="FlavorVista-AI.png" alt="Screenshots of FlavorVista AI App" />
         <img className="w-2/6 " src="reddit-vision-pro.png" alt="Screenshots of FlavorVista AI App" />
