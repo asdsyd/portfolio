@@ -52,7 +52,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <a href="https://www.linkedin.com/in/asdsyd/" className="-m-1.5 p-1.5">
             <span className="sr-only">Profile Pic</span>
-            <img className="h-auto w-10 rounded-full" src="selfie-blue-square.jpg" alt="profile picture" />
+            <img className="h-auto w-10 rounded-full" src="Selfie-blue-square.jpg" alt="profile picture" />
           </a>
         </div>
         
