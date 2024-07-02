@@ -45,10 +45,10 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 bg-white">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 bg-white dark:bg-black">
 
     <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px] hover:shadow-3xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a target='_blank' href="https://www.linkedin.com/in/asdsyd/" className="-m-1.5 p-1.5">
             <span className="sr-only">Profile Pic</span>
@@ -182,37 +182,41 @@ export default function Example() {
         </DialogPanel>
       </Dialog>
     </header>
-    <div>
+    <div className='dark:bg-white'>
       <Link target='_blank' href="https://developer.apple.com">
         <img className="h-auto hover:shadow-3xl" src="apple-developer.png" alt="Apple developer image" />
       </Link>
     </div>
-    <img className='h-auto' src='tech-stack.png' alt="SwiftUI, SwiftData, Swift and Xcode logo on dynamic island image" />
+    <div className='dark:bg-white'>
+      <img className='h-auto' src='tech-stack.png' alt="SwiftUI, SwiftData, Swift and Xcode logo on dynamic island image" />
+    </div>
 
-    <div className='flex justify-between items-center -space-x-14 pt-3'>
+    <div className='flex justify-between items-center -space-x-14 pt-3 dark:bg-white'>
       <img className="w-3/6" src="Wallpaper.png" alt="Screenshots of my Wallpaper" />
-      <Link target='_blank' href="https://developer.apple.com/design/human-interface-guidelines">
-        <p className='flex text-gray-600 items-center text-xl md:text-5xl lg:text-5xl p-2 px-4 rounded-full hover:bg-pink-200'>Design Different😉</p>
+      <Link target='_blank' href="https://developer.apple.com/design/human-interface-guidelines" className='mx-2'>
+        <p className='flex text-gray-600 text-center items-center text-xl md:text-5xl lg:text-5xl px-2 p-2 rounded-full hover:bg-pink-200 '>Design Different😉</p>
       </Link>
     </div> 
 
-    <div className='flex justify-between -space-x-14 blur-2xl pt-3'>
-      <img className="w-2/6 " src="FlavorVista-AI.png" alt="Screenshots of FlavorVista AI App" />
-      <img className="w-2/6 " src="reddit-vision-pro.png" alt="Screenshots of FlavorVista AI App" />
-    </div>    
+  <div className='dark:bg-white'>
+      <div className='flex justify-between -space-x-14 blur-2xl pt-3'>
+        <img className="w-2/6 " src="FlavorVista-AI.png" alt="Screenshots of FlavorVista AI App" />
+        <img className="w-2/6 " src="reddit-vision-pro.png" alt="Screenshots of FlavorVista AI App" />
+      </div>    
 
 
-    
-    <div id="about">
-      <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b m-16 from-zinc-200 p-3 px-5 text-center border bg-gray-200 rounded-full backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30 hover:shadow-4xl">
-            Launching FlavorVista AI on AppStore. Stay tuned.
-      </p>
-    </div>
+      
+      <div id="about">
+        <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b mx-16 from-zinc-200 p-3 px-5 text-center border bg-gray-200 rounded-full backdrop-blur-2xl bg-zinc-800/30 lg:static  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:bg-zinc-800/30 hover:shadow-4xl">
+              Launching FlavorVista AI on AppStore. Stay tuned.
+        </p>
+      </div>
 
 
-    <div className="flex justify-center -space-x-14 blur-2xl pt-3">
-        <div className="w-32 h-32 mix-blend-multiply bg-blue-400 rounded-full"></div>
-        <div className="w-32 h-32 mix-blend-multiply bg-pink-400 rounded-full"></div>
+      <div className="flex justify-center -space-x-14 blur-2xl pt-3">
+          <div className="w-32 h-32 mix-blend-multiply bg-blue-400 rounded-full"></div>
+          <div className="w-32 h-32 mix-blend-multiply bg-pink-400 rounded-full"></div>
+      </div>
     </div>
 
     
