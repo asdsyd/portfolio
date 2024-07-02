@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link'
 import { useState } from 'react'
 import {
   Dialog,
@@ -20,6 +21,7 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   UserCircleIcon,
+  UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, IdentificationIcon, PhoneIcon, PlayCircleIcon, UserIcon, WrenchScrewdriverIcon } from '@heroicons/react/20/solid'
@@ -31,7 +33,7 @@ const products = [
   { name: 'Linktree', description: 'All my links in one place', href: 'https://linktr.ee/asdsyd', icon: CursorArrowRippleIcon },
 ]
 const callsToAction = [
-  { name: 'AppStore(coming soon)', href: 'https://apps.apple.com/in/', icon: UserIcon },
+  { name: 'AppStore(coming soon)', href: 'https://apps.apple.com/in/', icon: UserCircleIcon },
   { name: 'Contact Me!', href: 'mailto:ashasd02@gmail.com', icon: ChatBubbleLeftIcon },
 ]
 
@@ -45,7 +47,7 @@ export default function Example() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 bg-white">
 
-    <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px]">
+    <header className="w-full bg-blue-800 text-white p-4 flex justify-between items-center rounded-tl-[55px] rounded-tr-[55px] hover:shadow-3xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="https://www.linkedin.com/in/asdsyd/" className="-m-1.5 p-1.5">
@@ -67,7 +69,7 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 px-2 text-sm font-semibold rounded-full leading-6 ">
+            <PopoverButton className="flex items-center gap-x-1 px-2 text-sm font-semibold rounded-full leading-6 hover:bg-white hover:text-black">
               PORTFOLIO
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </PopoverButton>
@@ -80,7 +82,7 @@ export default function Example() {
                 {products.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-blue-200"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <item.icon className="h-6 w-6 text-gray-600 group-hover:text-blue-600" aria-hidden="true" />
@@ -100,7 +102,7 @@ export default function Example() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-blue-800 hover:text-white"
                   >
                     <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                     {item.name}
@@ -110,12 +112,12 @@ export default function Example() {
             </PopoverPanel>
           </Popover>
 
-          <a href="https://drive.google.com/drive/folders/1hOYTr1L1v7YZJmffBZC8jGLB4V5KU4Px" className="text-sm font-semibold leading-6">
+          <a href="https://drive.google.com/drive/folders/1hOYTr1L1v7YZJmffBZC8jGLB4V5KU4Px" className="text-sm font-semibold leading-6 hover:bg-white hover:text-black rounded-full px-2">
             RESUME
           </a>
-          <a href="#" className="text-sm font-semibold leading-6">
+          <Link href="/#about" className="text-sm font-semibold leading-6 hover:bg-white hover:text-black rounded-full px-2">
             ABOUT
-          </a>
+          </Link>
         </PopoverGroup>
       </nav>
       <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -125,7 +127,7 @@ export default function Example() {
           <div className="text-sm font-bold px-10 text-blue-700">ASAD SAYEED</div>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-full p-2.5 text-gray-700 hover:bg-pink-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -138,7 +140,7 @@ export default function Example() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <DisclosureButton className="flex w-full items-center justify-between rounded-full py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-100">
                         PORTFOLIO
                         <ChevronDownIcon
                           className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
@@ -151,7 +153,7 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className="block rounded-full py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-blue-100"
                           >
                             {item.name}
                           </DisclosureButton>
@@ -162,28 +164,34 @@ export default function Example() {
                 </Disclosure>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-full px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-100"
                 >
                   RESUME
                 </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                <Link
+                  href="#about"
+                  className="-mx-3 block rounded-full px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-100"
                 >
                   ABOUT
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </DialogPanel>
       </Dialog>
     </header>
-    <img className="h-auto" src="apple-developer.png" alt="Apple developer image" />
+    <div>
+      <Link href="https://developer.apple.com">
+        <img className="h-auto hover:shadow-3xl" src="apple-developer.png" alt="Apple developer image" />
+      </Link>
+    </div>
     <img className='h-auto' src='tech-stack.png' alt="SwiftUI, SwiftData, Swift and Xcode logo on dynamic island image" />
 
     <div className='flex justify-between items-center -space-x-14 pt-3'>
       <img className="w-3/6" src="Wallpaper.png" alt="Screenshots of my Wallpaper" />
-      <p className='text-gray-600 items-center text-6xl'>Design Different😉</p>
+      <Link href="https://developer.apple.com/design/human-interface-guidelines">
+        <p className='flex text-gray-600 items-center text-3xl md:text-5xl lg:text-5xl p-2 px-4 rounded-full hover:bg-pink-200'>Design Different😉</p>
+      </Link>
     </div> 
 
     <div className='flex justify-between -space-x-14 blur-2xl pt-3'>
@@ -193,10 +201,11 @@ export default function Example() {
 
 
     
-
-    <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-3 px-5 text-center border bg-gray-200 rounded-full backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Launching FlavorVista AI on AppStore. Stay tuned.
-    </p>
+    <div id="about">
+      <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-3 px-5 text-center border bg-gray-200 rounded-full backdrop-blur-2xl dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-full lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30 hover:shadow-4xl">
+            Launching FlavorVista AI on AppStore. Stay tuned.
+      </p>
+    </div>
 
 
     <div className="flex justify-center -space-x-14 blur-2xl pt-3">
