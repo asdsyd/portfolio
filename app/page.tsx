@@ -165,7 +165,7 @@ export default function Example() {
                 </Disclosure>
                 <a
                   target='_blank'
-                  href="#"
+                  href="https://drive.google.com/drive/folders/1hOYTr1L1v7YZJmffBZC8jGLB4V5KU4Px"
                   className="-mx-3 block rounded-full px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-100"
                 >
                   RESUME
